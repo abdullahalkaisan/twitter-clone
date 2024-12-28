@@ -1,0 +1,199 @@
+@import './color';
+
+.rightSide{
+    padding: 5px 5px 5px 25px;
+    .rightContentBox.list{
+        padding: 0px;
+    }
+
+    .rightContentBox{
+        border: 1px solid #77777750;
+        border-radius: 16px;
+        margin-bottom: 16px;
+        color: $white;
+        overflow: hidden;
+        padding: 16px;
+
+
+        h1{
+            font-size: 20px;
+            margin-bottom: 10px;
+
+        }
+        p{
+            font-size: 15px;
+            margin-bottom: 16px;
+
+        }
+        button{
+            @include btn;
+        }
+        
+
+
+        .list{
+            display: flex;
+            justify-content: space-between;
+            transition: ease .3s;
+            cursor: pointer;
+            padding: 16px;
+
+            &:hover{
+                background-color: #111;
+                transition: ease .3s;
+            }
+
+
+
+            .iconBox{
+                height: 30px;
+                width: 30px;
+                border-radius: 999px;
+                cursor: pointer;
+                transition: ease .3s;
+                &:hover{
+                background-color: rgba($skyblue-dark, 0.2);
+                transition: ease .3s;
+                svg{
+                    fill: $skyblue-dark;
+                }
+
+                }
+
+
+                @include flex-center;
+
+
+                svg{
+                    fill: $gray;
+                    height: 20px;
+                }
+            }
+
+
+            .list-text{
+                small{
+                    color: $gray;
+                }
+                h4{
+                    color: $white;
+                    font-size: 15px;
+                    margin: 5px 0;
+                }
+            }
+        }
+
+
+
+    }
+
+
+
+
+}
+
+.searchBox{
+    height: 44px;
+    background-color: #202327;
+    overflow: hidden;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin-bottom: 16px;
+
+    svg{
+        height: 24px;
+        margin: 0 12px;
+        fill: $gray;
+    }
+    input{
+        border: none;
+        outline: none;
+        height: 100%;
+        width: 100%;
+        background-color: transparent;
+        font-size: medium;
+        color: $white !important;
+
+    }
+}
+
+
+.rightContentBox.whotofollow{
+    padding: 0;
+    h3{
+        font-size: 20px;
+        color: $white;
+        padding: 15px;
+        padding-bottom: 8px;
+
+    }
+
+
+    .peopleBox{
+        display: flex;
+        justify-content: space-between;
+        transition: ease .3s;
+        cursor: pointer;
+        span{
+            @include flex-center;
+            margin-right: 10px;
+        }
+        &:hover{
+            background-color: #111;
+            transition: ease .3s;
+        }
+
+        .showMore{
+            padding: 15px;
+            font-size: 15px;
+            color: $skyblue-dark;
+            font-weight: bold;
+        }
+
+        .peopleCard{
+            display: flex;
+            align-items: center;
+            padding: 10px;
+
+
+
+            .nameBox{
+                font-size: 20px;
+                h5{
+                    color: $white;
+                }
+                h6{
+                    color: $gray;
+                }
+            }
+
+
+            .imgBox{
+                @include avatar(40px);
+                margin-right: 7px
+            }
+
+
+
+        }
+
+
+
+        button{
+            @include btn;
+            background-color: $white;
+            color: #111;
+            font-size: small;
+            &:hover{
+                background-color: darken($white, 10%);
+            }
+        }
+    }
+
+
+
+
+
+}

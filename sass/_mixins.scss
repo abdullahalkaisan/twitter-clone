@@ -1,0 +1,54 @@
+
+@import './color';
+
+@mixin objectCover{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin avatar($size:30px){
+        height: $size;
+        width: $size;
+        border-radius: 999px;
+        overflow: hidden;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+}
+
+@mixin btn(
+        $bg-color:$skyblue-dark, 
+        $color:white, 
+        $padding-x: 20px, 
+        $padding-y: 10px, 
+        $font-size:large, 
+        $border-radius:999px, 
+        $font-weight:bold
+    )
+    {
+    border: none;
+    outline: none;
+    background-color: $bg-color;
+    color: $color;
+    padding: $padding-y $padding-x;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    border-radius: $border-radius;
+    transition: ease .3s;
+    cursor: pointer;
+    &:hover{
+    background-color: darken($bg-color, 10%);
+    transition: ease .3s;
+    }
+
+}

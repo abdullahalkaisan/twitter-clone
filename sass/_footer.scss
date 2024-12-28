@@ -1,0 +1,15 @@
+@import 'color';
+
+footer{
+    margin-bottom: 80px;
+    width: 100%;
+    span{
+        color: $gray;
+        cursor: pointer;
+        font-size: 13px;
+        margin: 5px;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}

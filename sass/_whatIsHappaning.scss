@@ -1,0 +1,68 @@
+// @mixin objectCover{
+//     height: 100%;
+//     width: 100%;
+//     object-fit: cover;
+// }
+
+@import './mixins';
+@import './color';
+
+
+.whatIsHpn_container{
+    width: 100%;
+    display: flex;
+    padding: 15px;
+
+
+    // background-color: red;
+    .imgBox{
+        height: 40px;
+        width: 40px;
+        overflow: hidden;
+        border-radius: 999px;
+        img{
+            @include objectCover;
+        }
+    }
+
+    .textBox{
+        width: 100%;
+        input{
+            font-size: 20px;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            margin-top: 8px;
+            margin-left: 12px;
+            color: white;
+        }
+    }
+
+    .actionBox{
+        margin-top: 20px;
+        padding: 0 10px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .actionIconContainer{
+            display: flex;
+            .iconBoxx{
+                margin-right: 15px;
+                cursor: pointer;
+                svg{
+                    height: 18px;
+                    fill: $skyblue-dark !important;
+                    filter: none;
+                }
+            }
+        }
+
+        button{
+            @include btn();
+            font-size: medium;
+        }
+    }
+
+
+}
